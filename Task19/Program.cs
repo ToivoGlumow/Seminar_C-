@@ -12,16 +12,16 @@ if (number < 10000 || number > 99999)
 }
 else
 {
-string palindrome = Palindrome(number);
+bool palindrome = Palindrome(number);
 Console.WriteLine(palindrome);
 }
 
 
-string Palindrome(int x)
+bool Palindrome(int x)
 {
-    if (x % 10 != x / 10000) return "Число не является палиндромом.";
+    if (x % 10 != x / 10000) return false;
     x = x % 10000;
     x = x / 10;
-    if (x % 10 != x / 100) return "Число не является палиндромом.";
-    return "Число является палиндромом.";
+    if (x % 10 != x / 100) return false;
+    return true;
 }

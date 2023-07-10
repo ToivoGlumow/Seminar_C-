@@ -6,7 +6,7 @@
 Console.Write("Введите пятизначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number > 99999 && number < 10000)
+if (number < 10000 || number > 99999)
 {
     Console.WriteLine("Введено не пятизначное число.");
 }

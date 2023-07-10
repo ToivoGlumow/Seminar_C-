@@ -19,7 +19,8 @@ Console.Write("Z2: ");
 int z2Coordinate = Convert.ToInt32(Console.ReadLine());
 
 double distance = Distance(x1Coordinate, y1Cordinate, z1Coordinate, x2Coordinate, y2Coordinate, z2Coordinate);
-Console.WriteLine($"Расстояние между точками равно {distance}.");
+double distanceRound = Math.Round(distance, 2, MidpointRounding.ToZero);
+Console.WriteLine($"Расстояние между точками равно {distanceRound}.");
 
 double Distance(int x1, int y1, int z1, int x2, int y2, int z2)
 {

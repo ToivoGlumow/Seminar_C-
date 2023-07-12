@@ -15,7 +15,10 @@ int Sum(int x)
     int sum = 0;
     for (int i = 1; i <= x; i++)
     {
-        sum = sum + i;
+        checked
+        {
+            sum = sum + i;
+        }
     }
 
     return sum;

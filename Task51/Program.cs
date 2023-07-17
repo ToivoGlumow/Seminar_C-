@@ -7,7 +7,7 @@
 8 4 2 4
 Сумма элементов главной диагонали: 1+9+2 = 12 */
 
-int[,] array = CreateMatrixRndInt(3, 4, 0, 9);
+int[,] array = CreateMatrixRndInt(4, 3, 0, 9);
 PrintMatrix(array);
 int sumElements = SumElementsMainDiagonals(array);
 Console.Write($"Сумма элементов главной диагонали: ");
@@ -25,7 +25,9 @@ Console.WriteLine(sumElements);
 int SumElementsMainDiagonals(int[,] arr)
 {
     int sum = 0;
-    for(int i = 0; i < arr.GetLength(0); i++)
+    int size = arr.GetLength(0);
+    if (size > arr.GetLength(1)) size = arr.GetLength(1);
+    for(int i = 0; i < size; i++)
     {
         sum += arr[i, i];
     }

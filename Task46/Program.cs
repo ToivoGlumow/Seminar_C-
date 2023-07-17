@@ -5,10 +5,6 @@ m = 3, n = 4.
 5 -2 33 -2
 77 3 8 1 */
 
-// int[,] array = new int[3,4];
-// Console.WriteLine(array.GetLength(0));
-// Console.WriteLine(array.GetLength(1));
-
 int[,] array = CreateMatrixRndInt(3, 4, 0, 50);
 PrintMatrix(array);
 

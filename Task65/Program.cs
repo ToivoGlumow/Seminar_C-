@@ -39,6 +39,5 @@ void GapOutput(int x, int y)
    else 
    {
     Console.Write($"{x} ");
-    return;
    }
 }
